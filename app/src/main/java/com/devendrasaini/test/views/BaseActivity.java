@@ -1,4 +1,4 @@
-package com.devendrasaini.test;
+package com.devendrasaini.test.views;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;

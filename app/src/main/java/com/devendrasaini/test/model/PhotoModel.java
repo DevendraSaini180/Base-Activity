@@ -1,7 +1,12 @@
-package com.devendrasaini.test;
+package com.devendrasaini.test.model;
+
+import android.widget.ImageView;
+
+import androidx.databinding.BindingAdapter;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.squareup.picasso.Picasso;
 
 public class PhotoModel {
 
@@ -23,6 +28,16 @@ public class PhotoModel {
     @SerializedName("download_url")
     @Expose
     private String downloadUrl;
+
+
+    public PhotoModel(String id, String author, Integer width, Integer height, String url, String downloadUrl) {
+        this.id = id;
+        this.author = author;
+        this.width = width;
+        this.height = height;
+        this.url = url;
+        this.downloadUrl = downloadUrl;
+    }
 
     public String getId() {
         return id;
@@ -70,5 +85,10 @@ public class PhotoModel {
 
     public void setDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
+    }
+
+    @BindingAdapter("android:downloadImage")
+    public static void loadImage(ImageView imageView, String imageUrl) {
+        Picasso.get().load(imageUrl).into(imageView);
     }
 }

@@ -1,4 +1,6 @@
-package com.devendrasaini.test;
+package com.devendrasaini.test.service;
+
+import com.devendrasaini.test.model.PhotoModel;
 
 import java.util.List;
 

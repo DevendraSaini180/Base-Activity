@@ -1,4 +1,4 @@
-package com.devendrasaini.test;
+package com.devendrasaini.test.singleton;
 
 import android.app.Application;
 
